@@ -1,0 +1,69 @@
+{
+    "main": "index.js",
+    "name": "scipm.unicode",
+    "version": "0.1.0",
+    "description": "show unicode characters",
+    "license": "GPL-3.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/aminassian/scipm.unicode.git"
+    },
+    "bugs": {
+        "type": "git",
+        "url": "git://github.com/aminassian/scipm.unicode/issues"
+    },
+    "keywords": [
+        "scipm-package"
+    ],
+    "dependencies": {
+    },
+    "scipmchild": {
+        "version": "1",
+        "scipmDependencies": {},
+        "luaRequire": [],
+        "SciTEStartup": {
+            "_use": "dofile",
+            "raw": null,
+            "filePath": null,
+            "dofile": ["scite", "main.lua"],
+            "luaReportExtend": "scipm.core.printInfoPackage('scipm.unicode')",
+            "infoLuaFunctions": [
+                {"name": "scipm.unicode.FromUTF8(pos)"},
+                {"name": "scipm.unicode.Demo_FromUTF8()"},
+                {"name": "scipm.unicode.Demo_ToUTF8()"},
+                {"name": "scipm.unicode.UTF16Table()"}
+            ],
+            "infoFiles" : [
+                {"path": ["README.md" ]},
+                {"path": ["package.json" ]},
+                {"path": ["scite", "main.lua" ]}
+            ],
+            "infoProps": [
+            ]
+        },
+        "actions": {
+            "Unicode": {
+                "title": "Unicode",
+                "description": "show unicode characters",
+                "pattern": [
+                    "*"
+                ],
+                "addToolsMenu": {
+                    "allow": true,
+                    "addContextMenu": false,
+                    "command": {
+                        "shortcuts": null,
+                        "subsystem": "luadirector",
+                        "cmd": "dostring scipm.unicode.UTF16Table()",
+                        "isFilter": null,
+                        "saveBefore": "2",
+                        "input": null,
+                        "replaceSelection": null,
+                        "quiet": null,
+                        "mode": null
+                    }
+                }
+            }
+        }
+    }
+}
