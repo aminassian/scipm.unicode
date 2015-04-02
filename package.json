@@ -1,7 +1,7 @@
 {
     "main": "index.js",
     "name": "scipm.unicode",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "show unicode characters",
     "license": "GPL-3.0",
     "repository": {
